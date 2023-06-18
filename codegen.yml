@@ -1,0 +1,17 @@
+schema: "https://api.mocki.io/v2/c4d7a195/graphql"
+documents: "src/**/*.gql"
+generates:
+  ./src/schema/schema.types.ts:
+    schema:
+      - src/schema/api.schema.graphql
+    config:
+      interfacePrefix: "I"
+      typesPrefix: "T"
+      skipTypename: true
+      declarationKind: interface
+      withHooks: true
+      namingConvention: change-case-all#pascalCase
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo

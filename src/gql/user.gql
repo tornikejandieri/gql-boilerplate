@@ -1,0 +1,14 @@
+query UserAndTodos {
+    user {
+        name
+        id
+        email
+        todos {
+            description
+            done
+        }
+    }
+}
+
+# define querys here and then
+#  npm run codegen
